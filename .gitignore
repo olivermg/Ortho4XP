@@ -1,3 +1,5 @@
+.cache/
+.Xauthority
 Binary/
 Elevation_data/
 Geotiffs/
@@ -8,6 +10,8 @@ yOrtho4XP_Overlays
 Previews/
 tmp/
 Tiles/
+custom_scenery_dest/
+overlays_src/
 **/Ortho4XP.log
 **/__pycache__
 **/Thumbs.db
