@@ -1,5 +1,8 @@
 version: '3.3'
 
+# NOTE: you may have to run 'xhost local:docker' before the
+# docker container can access your host's X server
+
 services:
   ortho:
     build: .
