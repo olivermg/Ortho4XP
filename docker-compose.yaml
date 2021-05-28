@@ -4,9 +4,9 @@ services:
   ortho:
     build: .
     volumes:
-    #- ${HOME}/.Xauthority:/ortho/.Xauthority:ro
+    - ${HOME}/.Xauthority:/ortho/.Xauthority:ro
     - /tmp/.X11-unix:/tmp/.X11-unix:ro
-    - .:/ortho:Z
+    - .:/ortho/ortho:Z
     environment:
     - DISPLAY=${DISPLAY}
     restart: "no"
