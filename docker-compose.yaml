@@ -3,6 +3,10 @@ version: '3.3'
 # NOTE: you may have to run 'xhost local:docker' before the
 # docker container can access your host's X server
 
+# NOTE: you may have to run './set-facl.sh' before,
+# in order to set file permissions, so container user
+# can access relevant files
+
 services:
   ortho:
     build: .
@@ -12,5 +16,9 @@ services:
     - .:/ortho/ortho:Z
     environment:
     - DISPLAY=${DISPLAY}
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
     restart: "no"
 
