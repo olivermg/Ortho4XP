@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  ortho:
+    build: .
+    volumes:
+    #- ${HOME}/.Xauthority:/ortho/.Xauthority:ro
+    - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    - .:/ortho:Z
+    environment:
+    - DISPLAY=${DISPLAY}
+    restart: "no"
+
